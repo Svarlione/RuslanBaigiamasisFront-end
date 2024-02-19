@@ -1,7 +1,4 @@
 // login.js
-
-
-    
     const loginForm =  document.getElementById('loginForm');
 
   

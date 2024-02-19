@@ -28,15 +28,27 @@ async function getUserInfo(userRef) {
 
         const userData = await response.json();
         console.log(userData);    
+
+        displayUserInfo(userData);
 }
 
 function displayUserInfo(user) {
     // Вывод информации о пользователе на страницу
     const userInfoContainer = document.getElementById('userInfo');
     userInfoContainer.innerHTML = `
-        <p><strong>User ID:</strong> ${user.userId}</p>
+    
+        <p><strong>User ID:</strong> ${user.id}</p>
         <p><strong>Username:</strong> ${user.userName}</p>
         <p><strong>Email:</strong> ${user.email}</p>
+        <p>firstName:${user.firstName}</p>
+        <p>firstName:${user.firstName}</p>
+        <p>firstName:${user.firstName}</p>
+        <p>firstName:${user.firstName}</p>
+        <p>firstName:${user.firstName}</p>
+
+
+        <div>${JSON.stringify(user)}</div>
+
         <!-- Добавьте другие поля пользователя, которые вы хотите отобразить -->
     `;
 }
